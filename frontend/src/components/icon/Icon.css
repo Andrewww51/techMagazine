@@ -1,0 +1,64 @@
+.wholePage .host {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.205);
+    margin: auto;
+    padding: 5px 15px;
+    border-radius: 15px 0px;
+  }
+  
+  .wholePage .host .loading {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 100%;
+    float: left;
+    margin-right: 5px;
+  }
+  
+  .wholePage .host .loading-0 {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+    background: #009dc6;
+  }
+  
+  .wholePage .host .loading-1 {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+    background: #e8b440;
+  }
+  
+  .wholePage .host .loading-2 {
+    -webkit-animation: bounce 1s infinite ease;
+            animation: bounce 1s infinite ease;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    background: #b62327;
+  }
+  
+  @-webkit-keyframes bounce {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+    }
+  }

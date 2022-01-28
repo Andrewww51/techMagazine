@@ -1,0 +1,174 @@
+#landing_container {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 30% 30% 30%;
+    gap: 1%;
+    grid-template-areas:
+      "left1 center right1"
+      "left2 center right2"
+      "left3 center right3";
+    background-color: black;
+    color: white;
+    font-family: "Abel", sans-serif;
+  
+    .center {
+      width: 100%;
+      height: 100%;
+      grid-area: center;
+      align-self: center;
+      justify-self: center;
+  
+      display: flex;
+      gap: 8vh;
+      flex-direction: column;
+      justify-content: center;
+  
+      mask-image: url("../../media/mask.png");
+      mask-size: 100%;
+      mask-position: center;
+      mask-repeat: no-repeat;
+  
+      background-color: white;
+  
+      #heading {
+        display: flex;
+        margin: 0 auto;
+        gap: 0.5vh;
+        flex-direction: column;
+        align-items: flex-end;
+        color: black;
+        background-color: white;
+        font-size: 1.5vw;
+  
+        h1 {
+          text-transform: capitalize;
+        }
+        h4 {
+          color: #555;
+        }
+      }
+  
+      #btn {
+        align-self: center;
+  
+        width: fit-content;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #f00;
+  
+        font-size: 1.5vw;
+        font-weight: bold;
+        text-transform: uppercase;
+  
+        box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+        cursor: pointer;
+        -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  
+        transition-duration: 700ms;
+  
+        &:hover {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+  
+          transform: scale(110%);
+        }
+      }
+    }
+  
+    .landingImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  
+      mask-image: url("../../media/mask.png");
+      mask-size: 75%;
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+  
+    #left_1 {
+      grid-area: left1;
+      object-position: top;
+    }
+    #left_2 {
+      grid-area: left2;
+      object-position: center;
+    }
+    #left_3 {
+      grid-area: left3;
+    }
+    #right_1 {
+      grid-area: right1;
+    }
+    #right_2 {
+      grid-area: right2;
+    }
+    #right_3 {
+      grid-area: right3;
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+  }
+  @-moz-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+  }
+  @-ms-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+  }
+  @keyframes pulse {
+    to {
+      box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #landing_container {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+  
+      .center {
+        width: 100%;
+        height: 100%;
+  
+        #heading {
+          font-size: 3vw;
+        }
+      }
+  
+      .landingImage {
+        display: none;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #landing_container {
+      .center {
+        #heading {
+          position: relative;
+          top: 5%;
+        }
+  
+        #btn {
+          font-size: 60%;
+        }
+      }
+    }
+  }
